@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache</groupId>
+  <artifactId>tomcat</artifactId>
+  <name>apache-tomcat-9.0.71</name>
+  <version>9.0.71</version>
+
+  <build>
+    <finalName>Tomcat-9.0.71</finalName>
+    <sourceDirectory>java</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <resources>
+      <resource>
+        <directory>java</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>test</directory>
+      </testResource>
+    </testResources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+    <dependencies>
+      <!--Error:(25, 17) java: package org.junit does not exist-->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.13.2</version>
+      </dependency>
+      <!--Error:(29, 28) java: package org.apache.tools.ant does not exist-->
+      <dependency>
+        <groupId>org.apache.ant</groupId>
+        <artifactId>ant</artifactId>
+        <version>1.10.12</version>
+      </dependency>
+      <!--Error:(32, 20) java: package org.easymock does not exist-->
+      <dependency>
+        <groupId>org.easymock</groupId>
+        <artifactId>easymock</artifactId>
+        <version>4.3</version>
+      </dependency>
+      <!--Error:(37, 35) java: package com.unboundid.ldap.listener does not exist-->
+      <dependency>
+        <groupId>com.unboundid</groupId>
+        <artifactId>unboundid-ldapsdk</artifactId>
+        <version>6.0.3</version>
+      </dependency>
+      <!--Error:(24, 32) java: package aQute.bnd.annotation.spi does not exist-->
+      <dependency>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>biz.aQute.bndlib</artifactId>
+        <version>6.2.0</version>
+      </dependency>
+      <!--Error:(37, 18) java: package javax.wsdl does not exist-->
+      <dependency>
+        <groupId>wsdl4j</groupId>
+        <artifactId>wsdl4j</artifactId>
+        <version>1.6.3</version>
+      </dependency>
+      <!--Error:(44, 21) java: package javax.xml.rpc does not exist-->
+      <dependency>
+        <groupId>javax.xml.rpc</groupId>
+        <artifactId>javax.xml.rpc-api</artifactId>
+        <version>1.1.2</version>
+      </dependency>
+
+      <!--Error:(40, 37) java: package org.eclipse.jdt.core.compiler does not exist-->
+      <!--Error:(299, 76) java: cannot find symbol
+        symbol:   variable VERSION_9
+        location: class org.eclipse.jdt.internal.compiler.impl.CompilerOptions-->
+      <dependency>
+        <groupId>org.eclipse.jdt</groupId>
+        <artifactId>ecj</artifactId>
+        <version>3.26.0</version>
+      </dependency>
+
+    </dependencies>
+
+
+
+
+</project>
